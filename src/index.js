@@ -23,11 +23,15 @@ function initializeCode() {
   }
 
   async function fetchBreedSummary(breed) {
-    const response = await fetch(
-      `https://en.wikipedia.org/api/rest_v1/page/summary/${breed}`
-    );
-    const data = await response.json();
-    return data.extract;
+    try {
+      const response = await fetch(
+        `https://en.wikipedia.org/api/rest_v1/page/summary/${breed}`
+      );
+      const data = await response.json();
+      return data.extract;
+    } catch (error) {
+      console.log("Error fetching dog summary:", error);
+    }
   }
 
   async function generateWikiItem(breed) {
