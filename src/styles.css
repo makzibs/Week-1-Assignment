@@ -31,19 +31,18 @@ body {
   }
 
   .img-container {
-    min-width: 60%;
-    max-width: 60%;
+    min-width: 50%;
+    max-width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .wiki-text {
-    min-width: 30%;
-    max-width: 40%;
+    min-width: 50%;
+    max-width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 10px;
   }
 }
